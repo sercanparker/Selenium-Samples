@@ -1,4 +1,7 @@
+package bbc;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import pages.bbc.HomePage;
 import pages.bbc.SportPage;
@@ -6,7 +9,7 @@ import pages.bbc.SportPage;
 /**
  * @author sercansensulun on 4.03.2020.
  */
-public class Test001 extends AbstractTest {
+public class Test001 extends BbcAbstractTest {
 
     @Test
     public void test001(){
@@ -18,4 +21,5 @@ public class Test001 extends AbstractTest {
         Assert.assertEquals(sportPage.getPageTitle(), "Home - BBC Sport");
 
     }
+
 }

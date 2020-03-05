@@ -1,4 +1,4 @@
 # Selenium-Samples
-# BBC
-# TODO : other web pages.
-# All pages are here.
+PageObject design pattern is tried to be used while developing selenium samples. Each sample is demonstrated below with GIFs.
+##### BBC News Website
+https://www.bbc.com/

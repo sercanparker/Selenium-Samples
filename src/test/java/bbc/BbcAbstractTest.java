@@ -1,14 +1,19 @@
+package bbc;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import pages.bbc.HomePage;
 import pages.bbc.SportPage;
 
 /**
  * @author sercansensulun on 4.03.2020.
  */
-public abstract class AbstractTest {
+public abstract class BbcAbstractTest {
 
     private HomePage homePage;
 
@@ -25,6 +30,7 @@ public abstract class AbstractTest {
     public void afterClass(){
         getHomePage().closePage();
     }
+
 
     public void setHomePage(HomePage homePage) {
         this.homePage = homePage;
