@@ -14,4 +14,5 @@ public interface IPageObject {
     TestStep enterTextWithXpath(String text, String xpath);
     WebElement waitUntilVisibleWithXpath(String xpath);
     TestStep<String> getTextWithXpath(String xpath);
+    void sleep(long milliseconds) throws InterruptedException;
 }

@@ -28,4 +28,13 @@ public class HomePage extends PageObject implements IHomePage {
         return new SignInPage(getWebDriver());
 
     }
+
+    @Override
+    public NewRepositoryPage clickNewRepositoryButton() {
+        TestStep clickNewRepoStep = super.clickWithXpath(HomePageXpaths.NEW_REPOSITORY_BUTTON);
+        if (!clickNewRepoStep.isSuccess()){
+            return null;
+        }
+        return new NewRepositoryPage(getWebDriver());
+    }
 }

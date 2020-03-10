@@ -1,6 +1,7 @@
 package interfaces.github;
 
 import concrete.TestStep;
+import pages.github.NewRepositoryPage;
 import pages.github.SignInPage;
 
 /**
@@ -9,4 +10,6 @@ import pages.github.SignInPage;
 public interface IHomePage {
     TestStep clickMenu();
     SignInPage clickSignOut();
+    NewRepositoryPage clickNewRepositoryButton();
+
 }

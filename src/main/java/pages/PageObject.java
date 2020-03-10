@@ -4,6 +4,7 @@ import concrete.TestStep;
 import constants.TestSettingConstants;
 import interfaces.IPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -104,6 +105,11 @@ public class PageObject implements IPageObject {
         return new TestStep<>(true,
                 String.format("%s text was found on web element with %s xpath", text, xpath),text);
 
+    }
+
+    @Override
+    public void sleep(long milliseconds) throws InterruptedException {
+        Thread.sleep(milliseconds);
     }
 
     /**

@@ -5,7 +5,7 @@ package constants;
  */
 public class TestSettingConstants {
 
-    public static final long WAIT_IN_SECONDS = 10;
+    public static final long WAIT_IN_SECONDS = 30;
     public static final String GITHUB_USERNAME = "GITHUB_USERNAME";
     public static final String GITHUB_PASSWORD = "GITHUB_PASSWORD";
 }
