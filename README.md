@@ -7,3 +7,5 @@ PageObject design pattern is tried to be used while developing selenium samples.
 * Login.
 * Add new repository.
 * Delete repository.
+
+Todo: add more web page on samples.
