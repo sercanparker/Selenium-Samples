@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 /**
  * @author sercansensulun on 4.03.2020.
  * Base class for each Page class.
@@ -108,8 +110,25 @@ public class PageObject implements IPageObject {
     }
 
     @Override
-    public void sleep(long milliseconds) throws InterruptedException {
-        Thread.sleep(milliseconds);
+    public void sleep(long milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Returns number of elements by xpath.
+     * @return
+     */
+    @Override
+    public TestStep<Integer> getWebElementCount(String xpath) {
+        List<WebElement> webElementList = getWebDriver().findElements(By.xpath(xpath));
+        if (!(webElementList.size() > 0)){
+            return new TestStep<Integer>(false, null,0);
+        }
+        return new TestStep<Integer>(true,"", webElementList.size());
     }
 
     /**

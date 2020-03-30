@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Github">
-    <test name="GithubTest">
+<suite name="Hepsiburada">
+    <test name="HepsiburadaTest">
         <classes>
-            <class name="github.Test001"/>
+            <class name="hepsiburada.Test001"/>
+            <class name="hepsiburada.Test002"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
