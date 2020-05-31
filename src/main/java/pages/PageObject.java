@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -36,9 +38,12 @@ public class PageObject implements IPageObject {
     public TestStep clickWithXpath(String xpath) {
         WebElement webElement = waitUntilClickableWithXpath(xpath);
         if (webElement == null) {
+            System.out.println(String.format("Web element with %s xpath is not clickable.", xpath));
             return new TestStep(false, String.format("Web element with %s xpath is not clickable.", xpath));
         }
         webElement.click();
+        waitForLoad(getWebDriver());
+        System.out.println(String.format("Web element with %s xpath is clicked.", xpath));
         return new TestStep(true, String.format("Web element with %s xpath is clicked.", xpath));
     }
 
@@ -85,6 +90,7 @@ public class PageObject implements IPageObject {
     @Override
     public WebElement waitUntilVisibleWithXpath(String xpath) {
         try {
+            waitForLoad(getWebDriver());
             return this.wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         }catch (Exception e){
             //TODO:log here.
@@ -109,6 +115,8 @@ public class PageObject implements IPageObject {
 
     }
 
+
+
     @Override
     public void sleep(long milliseconds) {
         try {
@@ -131,6 +139,17 @@ public class PageObject implements IPageObject {
         return new TestStep<Integer>(true,"", webElementList.size());
     }
 
+    @Override
+    public TestStep<String> getInputValue(String xpath) {
+        WebElement webElement = waitUntilVisibleWithXpath(xpath);
+        if (webElement == null){
+            return new TestStep<>(false, null,null);
+        }
+        String text = webElement.getAttribute("value");
+        return new TestStep<>(true,
+                String.format("%s text was found on web element with %s xpath", text, xpath),text);
+    }
+
     /**
      * Waits until web element that is found by given xpath is clickable.
      * If web element is not clickable, returns null.
@@ -139,13 +158,25 @@ public class PageObject implements IPageObject {
      */
     private WebElement waitUntilClickableWithXpath(String xpath){
         try {
-            return this.wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+            waitForLoad(getWebDriver());
+            return new WebDriverWait(getWebDriver(), TestSettingConstants.WAIT_IN_SECONDS_FOR_WEB_ELEMENT).
+                    until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
         }catch (Exception e){
             //TODO:log here.
             return null;
         }
     }
 
+    private void waitForLoad(WebDriver driver) {
+        ExpectedCondition<Boolean> pageLoadCondition = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                    }
+                };
+        WebDriverWait wait = new WebDriverWait(driver, TestSettingConstants.WAIT_IN_SECONDS);
+        wait.until(pageLoadCondition);
+    }
 
     public WebDriver getWebDriver() {
         return webDriver;

@@ -3,8 +3,7 @@
 <suite name="Hepsiburada">
     <test name="HepsiburadaTest">
         <classes>
-            <class name="hepsiburada.Test001"/>
-            <class name="hepsiburada.Test002"/>
+            <class name="n11.Test001"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -16,4 +16,5 @@ public interface IPageObject {
     TestStep<String> getTextWithXpath(String xpath);
     void sleep(long milliseconds) throws InterruptedException;
     TestStep<Integer> getWebElementCount(String xpath);
+    TestStep<String> getInputValue(String xpath);
 }

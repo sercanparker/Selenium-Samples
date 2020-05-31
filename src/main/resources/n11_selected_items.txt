@@ -1,0 +1,13 @@
+Item name is LENOVO AIO V330 10ULS0CX00 19.5" i5-8400 8GB 256GB W10PROItem price is 499900 | Sun May 31 15:01:32 EET 2020
+Item name is Zeiron Gambler T180 Intel İ5-3470 16GB 120GB + 500GB 4GB Oyuncu | Item price is 254900 | Sun May 31 15:03:11 EET 2020
+Item name is i5 3470 Turbo 3.60GHz 8GB Ram 240GB Ssd Masaüstü Ofis Bilgisayarı | Item price is 146744 | Sun May 31 15:31:09 EET 2020
+Item name is İNTEL İ5 (Turbo 3.07 Ghz ) 4GB Ram 320GB HDD Masaüstü Bilgisayar | Item price is 76899 | Sun May 31 15:37:07 EET 2020
+Item name is Intel i5m 8GB Ram 500GB Hdd 18,5'' Monitörlü Masaüstü Bilgisayar | Item price is 149999 | Sun May 31 15:40:30 EET 2020
+Item name is İNTEL İ5 (Turbo 3.07 Ghz ) 4GB Ram 320GB HDD Masaüstü Bilgisayar | Item price is 76899 | Sun May 31 15:44:05 EET 2020
+Item name is null | Item price is 0 | Sun May 31 15:47:25 EET 2020
+Item name is Seagate STEA1000400 Expansion 1 TB 2.5" USB 3.0 Taşınabilir Disk | Item price is 34800 | Sun May 31 15:52:50 EET 2020
+Item name is Zeiron Workcentre MZ158 İ5-650 3,46Ghz 8GB 500GB 2GB Masaüstü | Item price is 139900 | Sun May 31 15:56:58 EET 2020
+Item name is Zeiron Workcentre MZ158 İ5-650 3,46Ghz 8GB 500GB 2GB Masaüstü | Item price is 139900 | Sun May 31 15:58:02 EET 2020
+Item name is AMD Ryzen 5 3600X 3.8 GHz AM4 32 MB Cache 95 W İşlemci | Item price is 167700 | Sun May 31 16:02:39 EET 2020
+Item name is Zeiron Workcentre MZ158 İ5-650 3,46Ghz 8GB 500GB 2GB Masaüstü | Item price is 139900 | Sun May 31 16:20:48 EET 2020
+Item name is AMD Ryzen 5 3600X 3.8 GHz AM4 32 MB Cache 95 W İşlemci | Item price is 167700 | Sun May 31 17:22:53 EET 2020
